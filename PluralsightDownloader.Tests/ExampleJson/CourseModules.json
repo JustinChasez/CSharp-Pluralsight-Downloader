@@ -1,637 +1,309 @@
-[
+{
+  "id": "hands-on-responsive-design-css-preprocessor",
+  "publishedOn": "2016-03-14T20:18:34Z",
+  "updatedOn": "2016-03-14T20:18:34Z",
+  "title": "Hands on Responsive Design Using a CSS Preprocessor",
+  "shortDescription": "Build a mobile first, responsive website using the power of a CSS preprocessor so you can use variables, functions, calculations, shorthand, and minification in your web design workflow.",
+  "description": "CSS is very basic and tedious to write by hand. However, by using a CSS preprocessor, we can introduce variables, functions, calculations, shorthand, minification, and other cool stuff all while keeping our source files clean and readable. The power of using a CSS preprocessor for doing responsive design should not be underestimated.",
+  "level": "Intermediate",
+  "duration": "PT2H13S",
+  "popularityScore": 74350,
+  "hasTranscript": true,
+  "hasLearningCheck": false,
+  "mentorDepartment": "css",
+  "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m0&clip=0&mode=live",
+  "skillPaths": null,
+  "retired": {
+    "isRetired": false,
+    "reason": "",
+    "replacementId": ""
+  },
+  "rating": {
+    "average": 4.5,
+    "ratersCount": 29
+  },
+  "modules": [
     {
-        "userMayViewFirstClip": true,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m0",
-        "title": "Course Overview",
-        "description": "Course Overview.",
-        "duration": "00:01:20",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m0",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m0&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Course Overview",
-                "hasBeenViewed": false,
-                "duration": "00:01:20",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m0&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": true,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m0-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m0",
+      "title": "Course Overview",
+      "duration": "PT1M20S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m0&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m0|hands-on-responsive-design-css-preprocessor-m0-01",
+          "title": "Course Overview",
+          "duration": "PT1M20.039S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m0&clip=0&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m1",
-        "title": "CSS Preprocessor Overview",
-        "description": "In this module, I will share with you some foundational information to help you not only understand what a CSS preprocessor is but also how a CSS preprocessor fits into the web development workflow.",
-        "duration": "00:04:40",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m1",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m1&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Introduction",
-                "hasBeenViewed": false,
-                "duration": "00:04:40",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m1&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m1-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m1",
+      "title": "CSS Preprocessor Overview",
+      "duration": "PT4M40S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m1&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m1|hands-on-responsive-design-css-preprocessor-m1-01",
+          "title": "Introduction",
+          "duration": "PT4M40.733000000000004S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m1&clip=0&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m2",
-        "title": "Introduction to SASS",
-        "description": "Overview of eight benefits offered by SASS with code examples and descriptions.",
-        "duration": "00:08:41",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m2",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m2&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Introduction to SASS",
-                "hasBeenViewed": false,
-                "duration": "00:08:41",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m2&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m2-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m2",
+      "title": "Introduction to SASS",
+      "duration": "PT8M41S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m2&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m2|hands-on-responsive-design-css-preprocessor-m2-01",
+          "title": "Introduction to SASS",
+          "duration": "PT8M41.333999999999946S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m2&clip=0&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m3",
-        "title": "Setting up a New SASS Project",
-        "description": "In this module, we will setup a new website and create partials which are then combined into a single css file.",
-        "duration": "00:17:49",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m3",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Overview",
-                "hasBeenViewed": false,
-                "duration": "00:00:39",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m3-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 1,
-                "title": "Create a Project with Media Queries in the Partial Files",
-                "hasBeenViewed": false,
-                "duration": "00:09:57",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&mode=live&clip=1&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m3-02",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 2,
-                "title": "Create a Project with Media Queries with the @imports",
-                "hasBeenViewed": false,
-                "duration": "00:02:31",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&mode=live&clip=2&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m3-03",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 3,
-                "title": "A Demonstration of the Koala App Save Options",
-                "hasBeenViewed": false,
-                "duration": "00:02:15",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&mode=live&clip=3&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m3-04",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 4,
-                "title": "Adding a CSS Reset as a Partial",
-                "hasBeenViewed": false,
-                "duration": "00:02:24",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&mode=live&clip=4&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m3-05",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m3",
+      "title": "Setting up a New SASS Project",
+      "duration": "PT17M49S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m3|hands-on-responsive-design-css-preprocessor-m3-01",
+          "title": "Overview",
+          "duration": "PT39.335S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&clip=0&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m3|hands-on-responsive-design-css-preprocessor-m3-02",
+          "title": "Create a Project with Media Queries in the Partial Files",
+          "duration": "PT9M57.84400000000005S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&clip=1&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m3|hands-on-responsive-design-css-preprocessor-m3-03",
+          "title": "Create a Project with Media Queries with the @imports",
+          "duration": "PT2M31.932999999999993S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&clip=2&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m3|hands-on-responsive-design-css-preprocessor-m3-04",
+          "title": "A Demonstration of the Koala App Save Options",
+          "duration": "PT2M15.836999999999989S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&clip=3&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m3|hands-on-responsive-design-css-preprocessor-m3-05",
+          "title": "Adding a CSS Reset as a Partial",
+          "duration": "PT2M24.312000000000012S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m3&clip=4&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m4",
-        "title": "Building the Site Header",
-        "description": "Building the Site Header with Variables and Nesting.",
-        "duration": "00:26:35",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m4",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Overview of Variables and Nesting",
-                "hasBeenViewed": false,
-                "duration": "00:01:18",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m4-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 1,
-                "title": "Using Photoshop Generate Assets",
-                "hasBeenViewed": false,
-                "duration": "00:04:05",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&mode=live&clip=1&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m4-02",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 2,
-                "title": "Examining the Start File",
-                "hasBeenViewed": false,
-                "duration": "00:05:54",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&mode=live&clip=2&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m4-03",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 3,
-                "title": "Implementing Variables for the Header",
-                "hasBeenViewed": false,
-                "duration": "00:08:21",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&mode=live&clip=3&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m4-04",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 4,
-                "title": "Implementing Nesting for the Header",
-                "hasBeenViewed": false,
-                "duration": "00:05:19",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&mode=live&clip=4&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m4-05",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 5,
-                "title": "Building the Footer",
-                "hasBeenViewed": false,
-                "duration": "00:01:35",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&mode=live&clip=5&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m4-06",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m4",
+      "title": "Building the Site Header",
+      "duration": "PT26M35S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m4|hands-on-responsive-design-css-preprocessor-m4-01",
+          "title": "Overview of Variables and Nesting",
+          "duration": "PT1M18.831999999999994S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&clip=0&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m4|hands-on-responsive-design-css-preprocessor-m4-02",
+          "title": "Using Photoshop Generate Assets",
+          "duration": "PT4M5.13300000000001S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&clip=1&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m4|hands-on-responsive-design-css-preprocessor-m4-03",
+          "title": "Examining the Start File",
+          "duration": "PT5M54.13299999999998S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&clip=2&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m4|hands-on-responsive-design-css-preprocessor-m4-04",
+          "title": "Implementing Variables for the Header",
+          "duration": "PT8M21.435000000000002S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&clip=3&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m4|hands-on-responsive-design-css-preprocessor-m4-05",
+          "title": "Implementing Nesting for the Header",
+          "duration": "PT5M19.90100000000001S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&clip=4&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m4|hands-on-responsive-design-css-preprocessor-m4-06",
+          "title": "Building the Footer",
+          "duration": "PT1M35.94499999999999S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m4&clip=5&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m5",
-        "title": "Building the Main Rows and Columns",
-        "description": "In this module, we will create the HTML rows and columns and then use operations, variables, and nesting to style them.",
-        "duration": "00:16:42",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m5",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Introduction",
-                "hasBeenViewed": false,
-                "duration": "00:01:41",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m5-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 1,
-                "title": "Building the HTML Rows and Columns",
-                "hasBeenViewed": false,
-                "duration": "00:04:55",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&mode=live&clip=1&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m5-02",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 2,
-                "title": "Styling the Text Using Nesting and Variables",
-                "hasBeenViewed": false,
-                "duration": "00:05:24",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&mode=live&clip=2&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m5-03",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 3,
-                "title": "Styling the Columns Using Nesting and Operations",
-                "hasBeenViewed": false,
-                "duration": "00:04:40",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&mode=live&clip=3&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m5-04",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m5",
+      "title": "Building the Main Rows and Columns",
+      "duration": "PT16M42S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m5|hands-on-responsive-design-css-preprocessor-m5-01",
+          "title": "Introduction",
+          "duration": "PT1M41.733000000000004S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&clip=0&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m5|hands-on-responsive-design-css-preprocessor-m5-02",
+          "title": "Building the HTML Rows and Columns",
+          "duration": "PT4M55.733000000000004S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&clip=1&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m5|hands-on-responsive-design-css-preprocessor-m5-03",
+          "title": "Styling the Text Using Nesting and Variables",
+          "duration": "PT5M24.600000000000023S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&clip=2&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m5|hands-on-responsive-design-css-preprocessor-m5-04",
+          "title": "Styling the Columns Using Nesting and Operations",
+          "duration": "PT4M40.33499999999998S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m5&clip=3&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m6",
-        "title": "Building the Tabbed Navigation",
-        "description": "In this module, we will build the tabbed navigation using variables and Inheritance/Extend.",
-        "duration": "00:12:49",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m6",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Introduction",
-                "hasBeenViewed": false,
-                "duration": "00:02:19",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m6-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 1,
-                "title": "Building the Navigation in HTML",
-                "hasBeenViewed": false,
-                "duration": "00:03:22",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&mode=live&clip=1&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m6-02",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 2,
-                "title": "Styling the Navigation Using Inheritance/Extend",
-                "hasBeenViewed": false,
-                "duration": "00:07:07",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&mode=live&clip=2&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m6-03",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m6",
+      "title": "Building the Tabbed Navigation",
+      "duration": "PT12M49S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m6|hands-on-responsive-design-css-preprocessor-m6-01",
+          "title": "Introduction",
+          "duration": "PT2M19.932999999999993S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&clip=0&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m6|hands-on-responsive-design-css-preprocessor-m6-02",
+          "title": "Building the Navigation in HTML",
+          "duration": "PT3M22.333S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&clip=1&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m6|hands-on-responsive-design-css-preprocessor-m6-03",
+          "title": "Styling the Navigation Using Inheritance/Extend",
+          "duration": "PT7M7.266999999999996S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m6&clip=2&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m7",
-        "title": "Style Lists with Custom Bullets ",
-        "description": "In this module, we will use a mixin to style two unordered lists with different graphic bullets.",
-        "duration": "00:06:01",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m7",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m7&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Introduction",
-                "hasBeenViewed": false,
-                "duration": "00:01:24",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m7&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m7-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 1,
-                "title": "Styling the Lists with Mixins",
-                "hasBeenViewed": false,
-                "duration": "00:04:37",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m7&mode=live&clip=1&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m7-02",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m7",
+      "title": "Style Lists with Custom Bullets ",
+      "duration": "PT6M1S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m7&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m7|hands-on-responsive-design-css-preprocessor-m7-01",
+          "title": "Introduction",
+          "duration": "PT1M24.467S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m7&clip=0&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m7|hands-on-responsive-design-css-preprocessor-m7-02",
+          "title": "Styling the Lists with Mixins",
+          "duration": "PT4M37.432000000000016S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m7&clip=1&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m8",
-        "title": "Build Newspaper Style Columns ",
-        "description": "In this module, we will style newspaper style columns using a mixin that can accept a value.",
-        "duration": "00:07:30",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m8",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m8&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Introduction",
-                "hasBeenViewed": false,
-                "duration": "00:01:25",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m8&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m8-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 1,
-                "title": "Passing Values to a Mixin",
-                "hasBeenViewed": false,
-                "duration": "00:06:05",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m8&mode=live&clip=1&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m8-02",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m8",
+      "title": "Build Newspaper Style Columns ",
+      "duration": "PT7M30S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m8&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m8|hands-on-responsive-design-css-preprocessor-m8-01",
+          "title": "Introduction",
+          "duration": "PT1M25.635000000000005S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m8&clip=0&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m8|hands-on-responsive-design-css-preprocessor-m8-02",
+          "title": "Passing Values to a Mixin",
+          "duration": "PT6M5.266999999999996S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m8&clip=1&mode=live"
+        }
+      ]
     },
     {
-        "userMayViewFirstClip": false,
-        "moduleRef": "paul-cheney/hands-on-responsive-design-css-preprocessor-m9",
-        "title": "Using a for Loop for a 12 Column Grid ",
-        "description": "In this module, we will build a for loop within scss to create two 12-column grids.",
-        "duration": "00:18:06",
-        "hasBeenViewed": false,
-        "isHighlighted": false,
-        "fragmentIdentifier": "hands-on-responsive-design-css-preprocessor-m9",
-        "firstClipLaunchClickHandler": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-        "userMayBookmark": false,
-        "isBookmarked": false,
-        "clips": [
-            {
-                "transcripts": [ ],
-                "clipIndex": 0,
-                "title": "Introduction",
-                "hasBeenViewed": false,
-                "duration": "00:03:19",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&mode=live&clip=0&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m9-01",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 1,
-                "title": "The Demo File",
-                "hasBeenViewed": false,
-                "duration": "00:01:09",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&mode=live&clip=1&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m9-02",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 2,
-                "title": "Building a for Loop",
-                "hasBeenViewed": false,
-                "duration": "00:03:47",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&mode=live&clip=2&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m9-03",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 3,
-                "title": "Using 12-column Grids to Design a Layout",
-                "hasBeenViewed": false,
-                "duration": "00:04:14",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&mode=live&clip=3&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m9-04",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 4,
-                "title": "Textwrapping Using Shape Outside",
-                "hasBeenViewed": false,
-                "duration": "00:03:14",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&mode=live&clip=4&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m9-05",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            },
-            {
-                "transcripts": [ ],
-                "clipIndex": 5,
-                "title": "Testing for Multiple Browsers and Mobile Devices",
-                "hasBeenViewed": false,
-                "duration": "00:02:21",
-                "playerParameters": "author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&mode=live&clip=5&course=hands-on-responsive-design-css-preprocessor",
-                "userMayViewClip": false,
-                "clickActionDescription": "View with player",
-                "isHighlighted": false,
-                "name": "hands-on-responsive-design-css-preprocessor-m9-06",
-                "isBookmarked": false,
-                "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-                "hasBeenViewedAltText": "You have not watched this Clip."
-            }
-        ],
-        "hasBeenViewedImageUrl": "cs/has-not-been-viewed-checkmark-15-v1.png",
-        "hasBeenViewedAltText": "You have not watched this Module."
+      "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m9",
+      "title": "Using a for Loop for a 12 Column Grid ",
+      "duration": "PT18M6S",
+      "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&clip=0&mode=live",
+      "clips": [
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m9|hands-on-responsive-design-css-preprocessor-m9-01",
+          "title": "Introduction",
+          "duration": "PT3M19.64500000000001S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&clip=0&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m9|hands-on-responsive-design-css-preprocessor-m9-02",
+          "title": "The Demo File",
+          "duration": "PT1M9.102999999999994S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&clip=1&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m9|hands-on-responsive-design-css-preprocessor-m9-03",
+          "title": "Building a for Loop",
+          "duration": "PT3M47.400000000000006S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&clip=2&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m9|hands-on-responsive-design-css-preprocessor-m9-04",
+          "title": "Using 12-column Grids to Design a Layout",
+          "duration": "PT4M14.532999999999987S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&clip=3&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m9|hands-on-responsive-design-css-preprocessor-m9-05",
+          "title": "Textwrapping Using Shape Outside",
+          "duration": "PT3M14S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&clip=4&mode=live"
+        },
+        {
+          "id": "hands-on-responsive-design-css-preprocessor|paul-cheney|hands-on-responsive-design-css-preprocessor-m9|hands-on-responsive-design-css-preprocessor-m9-06",
+          "title": "Testing for Multiple Browsers and Mobile Devices",
+          "duration": "PT2M21.400000000000006S",
+          "playerUrl": "/player?course=hands-on-responsive-design-css-preprocessor&author=paul-cheney&name=hands-on-responsive-design-css-preprocessor-m9&clip=5&mode=live"
+        }
+      ]
     }
-]
+  ],
+  "courseImage": {
+    "courseListUrl": null,
+    "defaultUrl": null,
+    "smallUrl": null
+  },
+  "authors": [
+    {
+      "id": "paul-cheney",
+      "firstName": "Paul",
+      "lastName": "Cheney",
+      "displayName": "Paul Cheney"
+    }
+  ],
+  "audiences": [
+    "software-development"
+  ]
+}
