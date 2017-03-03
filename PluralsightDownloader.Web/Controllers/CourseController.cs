@@ -180,14 +180,16 @@ namespace PluralsightDownloader.Web.Controllers
             return maxSpeed * Constants.CLIP_DOWNLOAD_SPEED_MULTIPLIER;
         }
 
-        // ToDo: videos location should be configurable from client.
+        private string GetBaseFolderStructure(string courseTitle)
+        {
+            return Constants.DOWNLOAD_FOLDER_PATH + "\\" + courseTitle.ToValidFileName();
+        }
+
         private string GetVideoFolderStructure(string courseTitle, string moduleTitle, CourseSimpleClip clip)
         {
-            Directory.CreateDirectory(Constants.DOWNLOAD_FOLDER_PATH);
-            Directory.CreateDirectory(Constants.DOWNLOAD_FOLDER_PATH + "\\" + courseTitle.ToValidFileName());
-
-            return Constants.DOWNLOAD_FOLDER_PATH + "\\" + courseTitle.ToValidFileName() + "\\" + (clip.ModuleIndex + 1).ToString("D2") + " - " + moduleTitle.ToValidFileName();
+            return GetBaseFolderStructure(courseTitle) + "\\" + (clip.ModuleIndex + 1).ToString("D2") + " - " + moduleTitle.ToValidFileName();
         }
+
         private DirectoryInfo SetUpVideoFolderStructure(string courseTitle, string moduleTitle, CourseSimpleClip clip)
         {
             return Directory.CreateDirectory(GetVideoFolderStructure(courseTitle, moduleTitle, clip));
