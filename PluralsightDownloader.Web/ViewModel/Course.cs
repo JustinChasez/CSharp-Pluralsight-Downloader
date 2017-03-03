@@ -4,6 +4,8 @@ namespace PluralsightDownloader.Web.ViewModel
 {
     public class Course
     {
+        public string ID { get; set; }
+
         public string Title { get; set; }
 
         public string Level { get; set; }
@@ -24,7 +26,6 @@ namespace PluralsightDownloader.Web.ViewModel
         public string ReleaseDate { get; set; }
 
         public string Name { get; set; }
-
         public List<Author> Authors { get; set; }
 
         public bool HasTranscript { get; set; }
