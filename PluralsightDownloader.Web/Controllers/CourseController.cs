@@ -25,6 +25,8 @@ namespace PluralsightDownloader.Web.Controllers
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
+        private static Dictionary<string, Course> courses = new Dictionary<string, Course>();
+
         #endregion Properties
 
         #region Actions
@@ -42,6 +44,8 @@ namespace PluralsightDownloader.Web.Controllers
                     json = webClient.DownloadString(string.Format(Constants.COURSE_DATA_URL, coursename));
                     course = JsonConvert.DeserializeObject<Course>(json);
                     CourseSimpleModule.ResetIndex();
+
+                    course.ID = coursename;
 
                     NameValueCollection postData = new NameValueCollection() { { "courseId", coursename } };
                     byte[] responsebytes = webClient.UploadValues(Constants.COURSE_PAYLOAD_DATA_URL, postData);
@@ -81,6 +85,7 @@ namespace PluralsightDownloader.Web.Controllers
                 return HandleException(exception);
             }
 
+            courses.Add(course.ID, course);
             return Ok(course);
         }
 
@@ -95,6 +100,9 @@ namespace PluralsightDownloader.Web.Controllers
 
                 // 2- make sure the folders structure exist.
                 var videoSaveDirectory = SetUpVideoFolderStructure(clipToSave.CourseTitle, clipToSave.ModuleTitle, clipToSave);
+
+                // 2b- create course information, if missing
+                SaveCourseInformation(clipToSave);
 
                 // 3- download the video and report progress back.
                 int receivedBytes = 0;
@@ -173,6 +181,32 @@ namespace PluralsightDownloader.Web.Controllers
         #endregion Actions
 
         #region Helpers
+
+        private void SaveCourseInformation(CourseSimpleClip clip)
+        {
+            var course = courses[clip.ID.Substring(0, clip.ID.IndexOf("|"))];
+            var descriptionFile = GetBaseFolderStructure(course.Title) + "\\description.txt";
+            var levelFile = GetBaseFolderStructure(course.Title) + "\\level.txt";
+            var authorsFile = GetBaseFolderStructure(course.Title) + "\\authors.txt";
+            var dateFile = GetBaseFolderStructure(course.Title) + "\\date.txt";
+            if (!File.Exists(descriptionFile))
+                File.WriteAllText(descriptionFile, course.Description);
+            if (!File.Exists(levelFile))
+                File.WriteAllText(levelFile, course.Level);
+            if (!File.Exists(dateFile))
+                File.WriteAllText(dateFile, DateTime.Parse(course.ReleaseDate).ToString("dd/MM/yyyy"));
+            if (!File.Exists(authorsFile))
+            {
+                String separator = "";
+                String authors = "";
+                foreach (Author author in course.Authors)
+                {
+                    authors = separator + author.FirstName + " " + author.LastName;
+                    separator = ", ";
+                }
+                File.WriteAllText(authorsFile, String.Join(", ", authors));
+            }
+        }
 
         private long GetClipMaxDownloadSpeed(long seconds, long totalBytes)
         {
