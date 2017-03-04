@@ -35,13 +35,12 @@ namespace PluralsightDownloader.Tests.ViewModel
         [TestMethod()]
         public void GetSrtStringTest()
         {
-            
             var clip = transcript.Modules.First().Clips.First();
             var courseClip = course.Content.Modules.First().Clips.First();
             var srtString = clip.GetSrtString(courseClip.DurationSeconds);
 //            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\ViewModel\\srtTest.srt", srtString);
             var srtTest = File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "\\ViewModel\\srtTest.srt");
-            Assert.IsTrue(srtString == srtTest);
+            Assert.IsTrue(srtString.Equals(srtTest));
         }
     }
 }
