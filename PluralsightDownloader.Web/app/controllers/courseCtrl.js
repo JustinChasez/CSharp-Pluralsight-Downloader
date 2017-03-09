@@ -77,25 +77,35 @@
 
         function addClipToDownloadList(clip, module) {
             if (clip.hasBeenDownloaded)
-                return;
-            var clipFound = _.find(vm.clipsToDownloadQueue, function (item) {
-                return item.clip.id === clip.id;
-            });
-            if (!clipFound) {
-                vm.clipsToDownloadQueue.push({ clip: clip, module: module });
-                clip.progress.isDownloading = true; // disable download button
-                // fire an event notifying that a clip has been added to downloads queue so that the controller starts to download it.
-                $scope.$emit("clipsToDownloadQueue.push");
-            }
+                return 0;
+            vm.clipsToDownloadQueue.push({ clip: clip, module: module });
+            clip.progress.isDownloading = true; // disable download button
+            // fire an event notifying that a clip has been added to downloads queue so that the controller starts to download it.
+            $scope.$emit("clipsToDownloadQueue.push");
+            return 1;
         }
 
         function addModuleToDownloadList(module, $event) {
+            var moduleClipAddedCount = 0;
             _.forEach(module.clips, function (clip) {
-                vm.addClipToDownloadList(clip, module);
+                moduleClipAddedCount += vm.addClipToDownloadList(clip, module);
             });
-            if ($event && module.isAccordionOpen) {
-                $event.preventDefault();
-                $event.stopPropagation();
+            if (moduleClipAddedCount > 0) {
+                toaster.pop({
+                    type: 'info',
+                    showDuration: '5000',
+                    title: module.title,
+                    body: moduleClipAddedCount + ' clip(s) were added added.',
+                    bodyOutputType: 'trustedHtml'
+                });
+            } else {
+                toaster.pop({
+                    type: 'warning',
+                    showDuration: '2000',
+                    title: module.title,
+                    body: 'No clip was added.',
+                    bodyOutputType: 'trustedHtml'
+                });
             }
         }
 
@@ -116,11 +126,13 @@
         }
 
         function downloadClip(clip, module) {
+            var popupDelaySec = 15;
             clip.progress.isDownloading = true;
             toaster.pop({
                 type: 'info',
-                title: '',
-                body: 'Starting saving video <b>"' + clip.title + '</b>".',
+                showDuration: popupDelaySec + '000',
+                title: 'Starting download',
+                body: 'Starting saving video <b>"' + clip.title + '</b>".<br />Remaining queue size: ' + (vm.clipsToDownloadQueue.length),
                 bodyOutputType: 'trustedHtml'
             });
             clip.courseTitle = vm.course.title;
@@ -130,7 +142,8 @@
             return coursesService.downloadCourseModuleClip(clip).then(function (progress) {
                 toaster.pop({
                     type: 'success',
-                    title: '',
+                    showDuration: popupDelaySec + '000',
+                    title: 'Download successful',
                     body: 'Video file <b>"' + progress.fileName + '</b>" saved.',
                     bodyOutputType: 'trustedHtml'
                 });
@@ -139,15 +152,16 @@
                     clip.progress.isDownloading = false;
                 }, 500); // sometimes, progress callback comes after success callback.
             }, function (errorResponse) {
+                var downloadDelaySec = _.random(20, 30);
                 switch (errorResponse.status) {
                     case 429:
-                        var downloadDelaySec = _.random(5, 15);
                         toaster.pop({
                             type: 'error',
-                            title: '',
-                            body: 'Couldn\'t download video <b>"' + clip.title + '</b> due to many requests in short time". Trying again in ' + downloadDelaySec + ' seconds.',
+                            showDuration: popupDelaySec + '000',
+                            timeout: '30000',
+                            title: 'Too many requests',
+                            body: 'Couldn\'t download video <b>"' + clip.title + '"</b> due to many requests in short time. Trying again in ' + downloadDelaySec + ' seconds.',
                             bodyOutputType: 'trustedHtml',
-                            timeout: downloadDelaySec + '000',
                             progressBar: true,
                             onHideCallback: function () {
                                 vm.addClipToDownloadList(clip);
@@ -164,15 +178,31 @@
                     default:
                         toaster.pop({
                             type: 'error',
-                            title: '',
-                            body: 'Couldn\'t download video <b>"' + clip.title + '</b>" due to the following error: "<i>' + errorResponse.error + '</i>"',
-                            bodyOutputType: 'trustedHtml'
+                            showDuration: popupDelaySec + '000',
+                            timeout: '30000',
+                            title: 'Download failed',
+                            body: 'Couldn\'t download video <b>"' + clip.title + '"</b> due to the following error: <i>"' + errorResponse.error + '"</i>. Trying again in ' + downloadDelaySec + ' seconds.',
+                            bodyOutputType: 'trustedHtml',
+                            progressBar: true,
+                            onHideCallback: function () {
+                                vm.addClipToDownloadList(clip);
+                            }
                         });
                         break;
                 }
                 clip.progress.isDownloading = false;
             }).finally(function () {
                 vm.currentlyDownloading = false;
+                if (vm.clipsToDownloadQueue.length == 0)
+                {
+                    toaster.pop({
+                        type: 'success',
+                        showDuration: popupDelaySec + '000',
+                        title: 'Download ended',
+                        body: 'Every video file has been saved.',
+                        bodyOutputType: 'trustedHtml'
+                    });
+                }
                 // fire an event notifying that a clip has been saved/processed.
                 // Why?, so that the controllers knows that it should continue processing next clips in the downloads queue.
                 $scope.$emit("clipsToDownloadQueue.finish");
