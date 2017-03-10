@@ -156,7 +156,7 @@ namespace PluralsightDownloader.Web.Controllers
                 }
 
                 // 4- save the video file.
-                var inputFile = new MediaFile { Filename = videoSaveDirectory.FullName + "\\raw-" + videoFileName };
+                var inputFile = new MediaFile { Filename = videoSaveLocation };
                 var outputFile = new MediaFile { Filename = videoSaveDirectory.FullName + "\\" + videoFileName };
 
                 if (File.Exists(outputFile.Filename))
