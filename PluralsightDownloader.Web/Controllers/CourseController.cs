@@ -327,10 +327,10 @@ namespace PluralsightDownloader.Web.Controllers
             req.ContentType = "application/x-www-form-urlencoded";
             using (var writer = new StreamWriter(req.GetRequestStream()))
             {
-                writer.Write("Username=" + HttpUtility.UrlEncode(Constants.USER_NAME) + "&Password=" + HttpUtility.UrlEncode(Constants.PASSWORD));
+                writer.Write("Username=" + HttpUtility.UrlEncode(Constants.USER_NAME) + "&Password=" + HttpUtility.UrlEncode(Constants.PASSWORD) + "&RedirectUrl=/&ShowCaptcha=False");
             }
 
-            req.UserAgent = "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0";
+            req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0";
             req.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
             req.Headers.Add("Origin", Constants.BASE_URL);
             req.Headers.Add("Cache-Control", "max-age=0");
