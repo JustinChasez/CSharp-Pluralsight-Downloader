@@ -66,8 +66,14 @@ namespace PluralsightDownloader.Web.Controllers
 
                     SetupAuthenticationCookie(webClient);
                     // TODO: check if the user has access to exercise files.
-                    //json = webClient.DownloadString(string.Format(Constants.COURSE_EXERCISE_FILES_URL, coursename));
-                    //course.ExerciseFiles = JsonConvert.DeserializeObject<ExerciseFiles>(json);
+                    try
+                    {
+                        json = webClient.DownloadString(string.Format(Constants.COURSE_EXERCISE_FILES_URL, coursename));
+                        course.ExerciseFiles = JsonConvert.DeserializeObject<ExerciseFiles>(json);
+                    }
+                    catch
+                    {
+                    }
 
                     json = webClient.DownloadString(string.Format(Constants.COURSE_TRANSCRIPT_URL, coursename));
                     var transcript = JsonConvert.DeserializeObject<Transcript>(json);
@@ -185,13 +191,14 @@ namespace PluralsightDownloader.Web.Controllers
 
         #region Helpers
 
-        private void SaveCourseInformation(CourseSimpleClip clip)
+        private async void SaveCourseInformation(CourseSimpleClip clip)
         {
             var course = courses[clip.ID.Substring(0, clip.ID.IndexOf("|"))];
             var descriptionFile = GetBaseFolderStructure(course.Title) + "\\description.txt";
             var levelFile = GetBaseFolderStructure(course.Title) + "\\level.txt";
             var authorsFile = GetBaseFolderStructure(course.Title) + "\\authors.txt";
             var dateFile = GetBaseFolderStructure(course.Title) + "\\date.txt";
+            var excerciceFile = GetBaseFolderStructure(course.Title) + "\\" + course.Title + "-excercice.zip";
             if (!File.Exists(descriptionFile))
                 File.WriteAllText(descriptionFile, course.Description);
             if (!File.Exists(levelFile))
@@ -208,6 +215,39 @@ namespace PluralsightDownloader.Web.Controllers
                     separator = ", ";
                 }
                 File.WriteAllText(authorsFile, String.Join(", ", authors));
+            }
+            if (!File.Exists(excerciceFile))
+            {
+                if (course.ExerciseFiles != null)
+                {
+                    try
+                    {
+                        using (var client = new WebClient())
+                        using (var regStream = await client.OpenReadTaskAsync(course.ExerciseFiles.exerciseFilesUrl))
+                        using (var stream = new ThrottledStream(regStream, 115200))
+                        {
+                            byte[] buffer = new byte[1024];
+
+                            using (var fileStream = File.OpenWrite(excerciceFile))
+                            {
+                                for (;;)
+                                {
+                                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                                    if (bytesRead == 0)
+                                    {
+                                        await Task.Yield();
+                                        break;
+                                    }
+
+                                    fileStream.Write(buffer, 0, bytesRead);
+                                }
+                            }
+                        }
+                    } catch
+                    {
+
+                    }
+                }
             }
         }
 
