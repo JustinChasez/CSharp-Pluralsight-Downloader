@@ -35,7 +35,10 @@ namespace PluralsightDownloader.Web.Controllers
         [Route("{coursename}")]
         public IHttpActionResult CourseData(string coursename)
         {
-            Course course = new Course();
+            if (courses.ContainsKey(coursename))
+                return Ok(courses[coursename]);
+
+            Course course = null;
             String json = String.Empty;
             try
             {
