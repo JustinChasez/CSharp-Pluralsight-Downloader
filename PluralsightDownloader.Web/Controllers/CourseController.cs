@@ -198,7 +198,7 @@ namespace PluralsightDownloader.Web.Controllers
             var levelFile = GetBaseFolderStructure(course.Title) + "\\level.txt";
             var authorsFile = GetBaseFolderStructure(course.Title) + "\\authors.txt";
             var dateFile = GetBaseFolderStructure(course.Title) + "\\date.txt";
-            var excerciceFile = GetBaseFolderStructure(course.Title) + "\\" + course.Title + "-excercice.zip";
+            var excerciceFile = GetBaseFolderStructure(course.Title) + "\\" + course.Title.ToValidFileName() + "-excercice.zip";
             if (!File.Exists(descriptionFile))
                 File.WriteAllText(descriptionFile, course.Description);
             if (!File.Exists(levelFile))
