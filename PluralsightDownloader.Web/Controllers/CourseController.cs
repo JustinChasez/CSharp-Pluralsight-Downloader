@@ -168,7 +168,8 @@ namespace PluralsightDownloader.Web.Controllers
                 {
                     var srtFilename = outputFile.Filename.Substring(0, outputFile.Filename.Length - 4) + ".srt";
                     var srtString = clipToSave.TranscriptClip.GetSrtString(clipToSave.DurationSeconds);
-                    File.WriteAllText(srtFilename, srtString);
+                    if(srtString.Length > 4)
+                        File.WriteAllText(srtFilename, srtString);
                 }
 
                 return Ok(new ProgressArgs()
