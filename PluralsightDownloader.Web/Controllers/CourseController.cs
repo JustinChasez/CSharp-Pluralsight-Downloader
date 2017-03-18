@@ -224,7 +224,11 @@ namespace PluralsightDownloader.Web.Controllers
 
         private async void SaveCourseInformation(CourseSimpleClip clip)
         {
-            var course = courses[clip.ID.Substring(0, clip.ID.IndexOf("|"))];
+            String courseName = clip.ID.Substring(0, clip.ID.IndexOf("|"));
+            Course course = null;
+            courses.TryGetValue(courseName, out course);
+            if (course == null)
+                return;
             var descriptionFile = GetBaseFolderStructure(course.Title) + "\\description.txt";
             var levelFile = GetBaseFolderStructure(course.Title) + "\\level.txt";
             var authorsFile = GetBaseFolderStructure(course.Title) + "\\authors.txt";
