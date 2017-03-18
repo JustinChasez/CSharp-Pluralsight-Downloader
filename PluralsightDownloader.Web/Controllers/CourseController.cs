@@ -168,8 +168,11 @@ namespace PluralsightDownloader.Web.Controllers
                 {
                     var srtFilename = outputFile.Filename.Substring(0, outputFile.Filename.Length - 4) + ".srt";
                     var srtString = clipToSave.TranscriptClip.GetSrtString(clipToSave.DurationSeconds);
-                    if(srtString.Length > 4)
+                    if (srtString.Length > 4)
+                    {
                         File.WriteAllText(srtFilename, srtString);
+                        HandleEmbeddedSubtitles(outputFile.Filename, srtFilename);
+                    }
                 }
 
                 return Ok(new ProgressArgs()
@@ -191,6 +194,33 @@ namespace PluralsightDownloader.Web.Controllers
         #endregion Actions
 
         #region Helpers
+
+        private void HandleEmbeddedSubtitles(String videoFileName, String subtitlesFileName)
+        {
+            String FFMPEGFileName = Constants.FFMPEG_FOLDER_PATH + "\\ffmpeg.exe";
+            if (! File.Exists(FFMPEGFileName))
+                return;
+            File.Move(videoFileName, videoFileName + ".orig");
+
+            System.Diagnostics.Process pProcess = new System.Diagnostics.Process();
+            pProcess.StartInfo.FileName = FFMPEGFileName;
+            pProcess.StartInfo.Arguments = @"-i """ + videoFileName + @".orig"" -i """ + subtitlesFileName + @""" -c copy -c:s mov_text -metadata:s:s:0 language=eng """ + videoFileName + @"""";
+            pProcess.StartInfo.UseShellExecute = false;
+            pProcess.StartInfo.RedirectStandardOutput = true;
+            pProcess.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            pProcess.StartInfo.CreateNoWindow = true;
+            pProcess.Start();
+            string output = pProcess.StandardOutput.ReadToEnd();
+            pProcess.WaitForExit();
+            if(pProcess.ExitCode == 0)
+            {
+                File.Delete(videoFileName + ".orig");
+                File.Delete(subtitlesFileName);
+            } else
+            {
+                File.Move(videoFileName + ".orig", videoFileName);
+            }
+        }
 
         private async void SaveCourseInformation(CourseSimpleClip clip)
         {
