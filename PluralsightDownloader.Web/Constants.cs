@@ -17,8 +17,9 @@ namespace PluralsightDownloader.Web
         public static readonly string PASSWORD = ConfigurationManager.AppSettings["PASSWORD"];
         public static readonly bool SUBTITLES = bool.Parse(ConfigurationManager.AppSettings["SUBTITLES"]);
         public static readonly string SUBTITLES_LOCALE = ConfigurationManager.AppSettings["SUBTITLES_LOCALE"];
+        public static readonly string FFMPEG_FOLDER_PATH = ConfigurationManager.AppSettings["FFMPEG_FOLDER_PATH"];
         public static readonly string AUTH_COOKIE = "AuthCookie";
-        public static readonly string DOWNLOAD_FOLDER_PATH = ConfigurationManager.AppSettings["DOWNLOAD_FOLDER_PATH"] + "Pluralsight Downloader";
+        public static readonly string DOWNLOAD_FOLDER_PATH = ConfigurationManager.AppSettings["DOWNLOAD_FOLDER_PATH"] + "\\Pluralsight Downloader";
         public static readonly int CLIP_DOWNLOAD_SPEED_MULTIPLIER = int.Parse(ConfigurationManager.AppSettings["CLIP_DOWNLOAD_SPEED_MULTIPLIER"]);
     }
 }
